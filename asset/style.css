@@ -1,0 +1,593 @@
+/*
+	1. Vị trí
+	2. kích thước
+	3. Màu sắc
+	4. Kiểu dáng ( kiểu chữ )
+
+*/
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+
+}
+
+html{
+	font-family: Helvetica, Arial, sans-serif;
+	scroll-behavior: smooth;
+}
+
+.row {
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+.row::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.col {
+	float: left;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.col-third{
+	width: 33%;
+}
+
+.col-half {
+	width: 50%;
+}
+.col-full{
+	width: 100%;
+}
+
+.mt-8{
+	margin-top: 8px;
+}
+
+.text-center{
+	text-align: center !important ;
+}
+
+
+#main{
+	
+}
+
+#header{
+	height: 50px;
+	background-color: black;
+	position: fixed;
+	top : 0;
+	left : 0;
+	right : 0;
+	z-index: 1;
+
+}
+#nav, .subnav{
+	list-style: none;
+}
+
+#nav{
+	display: inline-block;
+}
+
+#nav > li {
+	display: inline-block;
+}
+
+#nav li{
+	position: relative;
+
+}
+
+#nav > li > a{
+	color: whitesmoke;
+	text-transform: uppercase;
+}
+
+#nav li a{
+	text-decoration: none ;
+	line-height: 50px;
+	padding: 0px 20px ;
+	display: block;
+}
+
+#nav > li:hover > a,#nav .subnav li:hover a{
+	color : #000;
+	background-color: #ccc;
+}
+
+#nav li:hover .subnav{
+	display : block;
+}
+
+
+#nav .subnav{
+	display: none ;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(3,3,3,0.3) ;
+	position: absolute ;
+	top : 100% ;
+}
+
+#nav .subnav a{
+	color: #333;
+	line-height: 40px;
+	min-width: 160px;
+	padding: 0 12px;
+
+}
+
+#nav .nav-arrow{
+	font-size: 12px ;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn {
+	float: right;
+	padding: 0 21px ;
+	
+}
+
+
+#header .mobile-menu-btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+
+#header .mobile-menu-btn:hover{
+	background-color: #ccc;
+	color: whitesmoke;
+}
+
+#header .menu-icon{
+	color: #fff;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+
+#header .search-icon{
+	color: #fff;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+
+#header .search-icon:hover{
+/*Đang lỗi	
+	background-color: red ;
+*/ 
+	cursor: pointer  ;
+}
+
+
+
+#slider{
+	position: relative;
+	padding-top: 50%;
+	margin-top: 50px;
+	background: url('img/noiThat1.jpg') top center / cover no-repeat ;
+
+}
+
+#slider .text-content{
+	position: absolute;
+	color: whitesmoke;
+	bottom: 45px;
+	width: 100%;
+	text-align: center;
+}
+
+#slider .text-content .text-heading{
+	margin-bottom: 20px;
+
+}
+
+#content{
+	background-color:black;
+	
+	
+}
+
+ .content-section{
+	
+	width: 1000px;
+	max-width: 100%;
+	padding: 64px 0px 30px 0px;
+	color: whitesmoke;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.content-section .section-heading{
+	text-align: center;
+	padding-bottom: 20px;
+	letter-spacing: 1.5px ;
+	
+
+}
+
+#content .content-section .about-text{
+	font-size: 15px;
+	text-align: justify;
+	line-height: 1.4;
+	
+	
+}
+
+.text-decription{
+	text-shadow: 0 0 5px #000;
+}
+
+#content .abum .abum-item{
+	margin-top: 48px;
+	float: left;
+	display: block;
+
+
+}
+
+#content .abum .abum-name{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 40px;
+
+}
+
+#content .abum .abum-item .abum-img1{
+	margin-top: 15px;
+	width: 100%;
+	height: 60%;
+}
+
+
+#content .abum .abum-item .abum-item1{
+ padding: 3px;	
+}
+
+#content .abum .abum-item1 {
+	
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+#content .abum .abum-item .abum-item1 .abum-img2{
+	width: 50%;
+	padding: 10px;
+	
+}
+
+.clearn{
+	clear: both;
+}
+
+#store-section{
+	background-color: black;
+	padding-bottom: 48px;
+}
+
+.content-section .section-sub-heading{
+	text-align: center;
+	font-style: italic;
+	
+}
+
+.slots-list{
+	margin-top: 30px;
+	color : black;
+	background-color: whitesmoke;
+	list-style: none;
+}
+
+.slots-list li{
+	font-size: 15px;
+	padding: 11px 16px;
+	border-bottom: 1px solid #ddd;
+
+}
+
+.slots-list .sold-out{
+	background-color: orangered	;
+	color: whitesmoke;
+	padding: 3px 4px;
+	margin-left: 6px;
+}
+
+.slots-list .quanlity{
+	float: right;
+
+	width: 24px;
+	height: 24px;
+
+	background-color: black;
+	color: whitesmoke;
+
+	margin-top: -3px;
+	border-radius: 50% ;
+	text-align: center;
+	line-height: 24px;
+
+}
+
+.clear{
+	clear: both;
+}
+
+.cars-list{
+	margin: 32px -16px 0 -8px;
+
+	
+}
+
+.car-item{
+	float: left;
+	width: 33%;
+	padding: 0 8px;
+}
+
+.cars-list .car-img{
+	width: 100%;
+	display: block;
+	object-fit: fill;
+}
+
+
+
+
+
+.car-body{
+	background-color: whitesmoke;
+	color: black;
+	text-align: left;
+	padding: 16px ;
+	font-size: 20px;
+}
+
+.car-body .car-heading{
+	font-weight: 600;
+}
+
+.car-body .car-time{
+	margin-top: 15px;
+	color: #82706f;
+	font-size: 15px;
+}
+
+.cars-list .car-img:hover{
+	opacity: 0.6;
+	cursor: pointer  ;
+
+}
+
+.car-body .car-desc{
+	margin-top: 15px;
+	line-height: 1.4;
+	font-size: 15px;
+}
+
+ .btn{
+	margin-top: 15px;
+	background-color: black;
+	padding: 13px 16px ;
+	display: inline-block;
+	font-size: 18px;
+	color: whitesmoke;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+}
+.btn:hover{
+	color: black;
+	background-color: #ccc;
+}
+
+
+
+
+.modal{
+	position: fixed;
+	top : 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal.open{
+	display: flex;
+}
+
+.modal .modal-container{
+	background: #fff;
+	width: 900px;
+	max-height: calc(100%-32px);
+	min-height: 200px;
+	position: relative;
+	animation: modalFadeIn ease 0.5s;
+
+}
+
+.modal-container .modal-close{
+	padding: 8px;
+	font-size: 15px;
+	color: whitesmoke;
+	
+	position: absolute;
+	right: 0;
+	top : 0;
+	
+	opacity: 0.5;
+}
+
+.modal-container .modal-close:hover{
+	cursor: pointer;
+	opacity: 1.1;
+
+}
+
+.modal-header{
+	background: #333;
+	color: whitesmoke;
+	height: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+}
+
+.modal-header > i{
+	margin-right: 16px;
+}
+
+.modal-body{
+	padding: 15px;
+}
+
+.modal-body .modal-label{
+	display: block;
+	margin-bottom: 8px ;
+}
+
+.modal-body .modal-label:hover{
+	cursor: pointer;
+}
+
+
+.modal-body .modal-input{
+	border: 2px solid #ccc;
+	width: 100%;
+	font-size: 15px;
+	height: 35px;
+	margin-bottom: 20px;
+}
+
+#Request{
+	background: #333;
+	color: whitesmoke;
+	border: none;
+	width: 100%;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#Request:hover{
+	opacity: 0.8
+
+}
+#contact-me{
+	color: blueviolet;
+	border: none;
+	width: 100%;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 10px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+#contact-me:hover{
+	opacity: 0.8;
+}
+
+
+#contact-container .content-section{
+	color: black !important;
+	padding-bottom: 100px;
+}
+
+.contact-content{
+	margin-top: 48px;
+}
+
+.contact-info{
+	font-size: 20px ;
+	line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"]{
+	width: 30px;
+	display: inline-block;
+}
+
+.contact-form{
+	font-size: 18px;
+}
+
+.contact-form .contact-control{
+	padding: 10px;
+	border: 1px solid #ccc;	
+	width: 100%;
+}
+
+.contact-form .form-submit{
+	float: right;
+	margin-right: 8px;
+}
+
+.over-car {
+    margin-bottom: -5px;
+} 
+.over-car img{
+	width: 100%;
+}
+
+
+#footer{
+	text-align: center;
+	padding: 64px 16px;
+	background-color: black;
+	color: whitesmoke;
+	padding-bottom: 180px;
+}
+
+#footer .socials-list{
+	font-size: 24px;
+	text-orientation: underline;
+	margin-bottom: 20px;
+	margin-top: 150px;
+}
+
+#footer .socials-list a{
+	width: 4%;
+	display: inline-block;
+	color: whitesmoke;
+	text-decoration: none;
+	margin-bottom: 10px;
+
+}
+#footer .socials-list a:hover{
+	opacity: 0.5;
+}
+
+#footer .copyright a{
+	color: whitesmoke;
+}
+
+@keyframes modalFadeIn{
+	from {
+		transform: translateY(-500px) ;
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
